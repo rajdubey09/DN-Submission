@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+      .button {
+        display: inline-block;
+        background-color: #7b38d8;
+        padding: 10px;
+        width: 200px;
+        color: #ffffff;
+        text-align: center;
+        font-family: serif;
+        font-size: 20px;
+      }
+      .button {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      }
+    </style>
+  </head>
+  
+  <body align="center">
+    <h1>DN Text Similarity Submission</h1>
+    <form action="{{ url_for('form')}}" method='post'>
+      <div class="form-group">
+        <textarea name="sentence1" placeholder="Sentence 1" rows="5" cols="55"></textarea>
+      </div>
+      <br>
+      <div class="form-group">
+        <textarea name="sentence2" placeholder="Sentence 2" rows="5" cols="55"></textarea>
+      </div>
+      <br>
+      <button type='submit' class="button">Check</button>
+    </form>
+    Sentence similarity Score is {{sim_score}}
+  </body>
+</html>
